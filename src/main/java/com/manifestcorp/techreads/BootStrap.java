@@ -20,9 +20,9 @@ public class BootStrap implements ApplicationListener<ContextRefreshedEvent> {
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
         if(bookRepository.count() < 3) {
-            bookRepository.save(new Book("Beginning Groovy and Grails"));
-            bookRepository.save(new Book("Pro Eclipse JST"));
-            bookRepository.save(new Book("Enterprise Java Development on a Budget"));
+            bookRepository.save(new Book("TestBook One", "TestAuthor One", "5/10", "https://www.iconpacks.net/icons/2/free-opened-book-icon-3169-thumb.png"));
+            bookRepository.save(new Book("TestBook Two", "TestAuthor Two", "5/10", "https://www.iconpacks.net/icons/2/free-opened-book-icon-3169-thumb.png"));
+            bookRepository.save(new Book("TestBook Three", "TestAuthor Three", "5/10", "https://www.iconpacks.net/icons/2/free-opened-book-icon-3169-thumb.png"));
         }
     }
 }
