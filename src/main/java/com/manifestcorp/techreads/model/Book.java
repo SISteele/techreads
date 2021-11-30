@@ -24,6 +24,17 @@ public class Book {
         this.coverArt = coverArt;
     }
 
+    public Book(Book copy) {
+        this.copy(copy);
+    }
+
+    public void copy(Book original) {
+        this.title = original.title;
+        this.author = original.author;
+        this.rating = original.rating;
+        this.coverArt = original.coverArt;
+    }
+
 
     public long getId() {return id; }
     public void setId(long id) {this.id = id;}
